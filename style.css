@@ -353,37 +353,56 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
 
 /* PROJECTS SECTION */
 #projects {
   position: relative;
-  display: grid;               /* Enable grid layout */
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create columns with a minimum width of 250px, and fill available space */
-  gap: 2rem;                   /* Adjust spacing between items */
-  padding: 2rem;               /* Add padding to the section */
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
+.section-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  gap: 2rem; /* Space between columns */
+  padding: 2rem;
+}
+
+.project-item {
+  border-radius: 2rem;
+  border: rgb(163, 163, 163) 0.1rem solid;
   background: rgb(250, 250, 250);
+  text-align: center;
 }
 
 .project-img {
+  width: 100%;
+  height: auto;
   border-radius: 2rem;
-  width: 100%;                 /* Ensure images fill their grid container */
-  height: auto;                /* Maintain aspect ratio */
 }
 
 .project-title {
-  margin: 1rem;
-  color: black;
+  padding: 1rem;
 }
 
 .project-btn {
+  margin-top: 1rem;
   color: black;
   border-color: rgb(163, 163, 163);
 }
+
+/* RESPONSIVE: 3 Columns for Larger Screens (default) */
+@media screen and (max-width: 1200px) {
+  .section-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+/* RESPONSIVE: 1 Column for Small Screens */
+@media screen and (max-width: 600px) {
+  .section-container {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+}
+
 
 /* CONTACT */
 
