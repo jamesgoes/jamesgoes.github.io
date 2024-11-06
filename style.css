@@ -157,6 +157,13 @@ section {
 }
 
 .section-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
+  gap: 2rem; /* Space between columns */
+  padding: 2rem;
+}
+
+.section__pic-container {
   display: flex;
 }
 
@@ -353,7 +360,6 @@ article .icon {
   cursor: default;
 }
 
-
 /* PROJECTS SECTION */
 #projects {
   position: relative;
@@ -361,7 +367,7 @@ article .icon {
 
 .section-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
   gap: 2rem; /* Space between columns */
   padding: 2rem;
 }
@@ -448,9 +454,25 @@ article .icon {
 
 footer {
   height: 26vh;
-  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
 }
 
 footer p {
   text-align: center;
+  font-size: 1.25rem;
+  color: rgb(85, 85, 85);
+}
+
+footer a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(53, 53, 53);
+}
+
+footer a:hover {
+  color: black;
 }
