@@ -100,4 +100,12 @@
   .text-container {
     text-align: justify;
   }
+  /* PROJECTS SECTION on smaller screens */
+@media screen and (max-width: 600px) {
+  #projects {
+    grid-template-columns: 1fr;  /* Stack the projects into a single column on mobile */
+    gap: 1rem;                   /* Reduce the gap between items on smaller screens */
+  }
+}
+
 }
